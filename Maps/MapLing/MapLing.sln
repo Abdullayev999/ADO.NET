@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLing", "MapLing\MapLing.csproj", "{FC40BA01-D6DF-4BA3-8956-01529D9166C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC40BA01-D6DF-4BA3-8956-01529D9166C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC40BA01-D6DF-4BA3-8956-01529D9166C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC40BA01-D6DF-4BA3-8956-01529D9166C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC40BA01-D6DF-4BA3-8956-01529D9166C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EBEFBBF-CAE8-4A72-A3B7-F02360F6BEBB}
+	EndGlobalSection
+EndGlobal
