@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Academy.Management.Views.ProductView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:t="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Academy.Management.Views"
+             mc:Ignorable="d" Name="View"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/Resources/unnamed.jpg"/>
+    </UserControl.Background>
+    <DockPanel>
+        <UniformGrid Margin="10" DockPanel.Dock="Bottom" Rows="1" Columns="2">
+            <Button Command="{Binding AddCommand}"  BorderBrush="#C7CADB" BorderThickness="2" t:ShadowAssist.ShadowDepth="Depth3" Margin="10" Height="40"  FontSize="18" Content="Add Product"></Button>
+            <Button Command="{Binding BackCommand}"  BorderBrush="#C7CADB" BorderThickness="2" t:ShadowAssist.ShadowDepth="Depth3" Margin="10" Height="40"  FontSize="18" Content="Back"></Button>
+        </UniformGrid>
+        <DataGrid  FontSize="20" Foreground="Yellow" FontWeight="Bold"  ItemsSource="{Binding Products}" IsReadOnly="True" AutoGenerateColumns="False" >
+            <DataGrid.Background>
+                <ImageBrush/>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="80" Foreground="White" Binding="{Binding Id}" Header="Id"/>
+                <DataGridTextColumn  Width="120"  Foreground="White" Binding="{Binding Name}" Header="Name"/>
+                <DataGridTextColumn  Width="150"  Foreground="White" Binding="{Binding Price}" Header="Price"/>
+                <DataGridTextColumn  Width="130"  Foreground="White" Binding="{Binding Quantity}" Header="Quantity"/> 
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Edit" CommandParameter="{Binding .}" Command="{Binding DataContext.EditCommand , ElementName=View}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" CommandParameter="{Binding .}" Command="{Binding DataContext.DeleteCommand , ElementName=View}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>
